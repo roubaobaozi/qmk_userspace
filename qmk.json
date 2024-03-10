@@ -1,4 +1,24 @@
 {
     "userspace_version": "1.0",
-    "build_targets": []
+    "build_targets": [
+        ["crkbd/rev1", "baobaozi"],
+        ["ferris/sweep", "baobaozi"],
+        ["boardsource/microdox/v1", "baobaozi"],
+        ["cocot46", "baobaozi"],
+        ["dailycraft/claw44", "baobaozi"],
+        ["ergotonic49", "baobaozi"],
+        ["eyeohdesigns/babyv", "baobaozi"],
+        ["for_science", "baobaozi"],
+        ["hhkb/ansi", "baobaozi"],
+        ["ibnuda/squiggle", "baobaozi"],
+        ["idobao/id75/v1", "baobaozi"],
+        ["keyhive/ut472", "baobaozi"],
+        ["lily58", "baobaozi"],
+        ["redox", "baobaozi"],
+        ["rgbkb/sol3", "baobaozi"],
+        ["ristretto", "baobaozi"],
+        ["splitkb/kyria/rev3", "baobaozi"],
+        ["ymdk/ymd67", "baobaozi"],
+        ["handwired/dactyl_manuform/4x5", "baobaozi"]
+    ]
 }
