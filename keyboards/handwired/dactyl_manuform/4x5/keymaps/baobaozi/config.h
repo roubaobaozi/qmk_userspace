@@ -34,8 +34,10 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #ifdef RGBLIGHT_ENABLE
 #   undef RGBLIGHT_ANIMATIONS
 #   undef RGBLED_NUM
+// #   define RGBLED_NUM 10
 #   define RGB_DI_PIN D3
-#   define RGBLED_NUM 10
+#   undef RGBLIGHT_LED_COUNT
+#   define RGBLIGHT_LED_COUNT 10
 #   define RGBLED_SPLIT {5, 5}
 #   define RGBLIGHT_LIMIT_VAL 250
 // #define RGBLIGHT_ANIMATIONS

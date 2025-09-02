@@ -91,14 +91,14 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             tap_code(KC_SLSH);
         }
             // break;
-    } else if (keycode == MFATA) {
-        if (record->event.pressed) {
-            // when keycode is pressed, make sure normal mode and then send string to start the buffer change (vim)
-            tap_code(KC_EQL);
-            tap_code16(KC_GT);
-            tap_code(KC_SPC);
-        }
-            // break;
+    /* } else if (keycode == MFATA) { */
+    /*     if (record->event.pressed) { */
+    /*         // when keycode is pressed, make sure normal mode and then send string to start the buffer change (vim) */
+    /*         tap_code(KC_EQL); */
+    /*         tap_code16(KC_GT); */
+    /*         tap_code(KC_SPC); */
+    /*     } */
+    /*         // break; */
     } else if (keycode == KC_LPRN) {
         if (
             record->event.pressed
@@ -348,12 +348,9 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
         keycode == __T_L1___
         || keycode == __T_R1___
         || keycode == LTN(Q)
-#if defined(TEST_SYN)
         || keycode == LT0(QUOT)
-#else
-        || keycode == LTS(W)
-        || keycode == LT0(X)
-#endif
+        /* || keycode == LTS(W) */
+        /* || keycode == LT0(X) */
         || keycode == LTK(Z)
         || keycode == MC(SLSH)
     ) {

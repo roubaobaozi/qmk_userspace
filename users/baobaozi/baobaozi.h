@@ -14,15 +14,12 @@ enum userspace_layers {
     // KC_MAKE = SAFE_RANGE,
     // NEW_SAFE_RANGE,  // use "NEW_SAFE_RANGE" for keymap specific codes
     _COLEMAK = 0,
+    _FKWIN,
     _QWERTY,
     // _XIN,
     _NAV,
-#if defined(TEST_SYN)
+    _NVW,
     _SYN,
-#else
-    _SYM,
-    _NUM,
-#endif
     _CUR,
     _FNC,
     _KB,
@@ -45,7 +42,7 @@ enum custom_keys {
 // enum custom_keycodes {
     MJSPL = SAFE_RANGE,
     MURLS,
-    MFATA,
+    // MFATA,
     MFNXT,
     // MURL,
     // MRPTR,

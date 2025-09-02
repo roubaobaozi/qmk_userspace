@@ -1,7 +1,8 @@
 #pragma once
 
 // If you don’t have a crazy amount of layers (9+), this helps save space
-#define LAYER_STATE_8BIT
+// #define LAYER_STATE_8BIT
+#define LAYER_STATE_16BIT
 
 // disable the old style of macros, and no action function, see if it saves space
 #define NO_ACTION_MACRO
@@ -148,6 +149,3 @@
 
 // Courtesy of filterpaper
 #define RP2040_BOOTLOADER_DOUBLE_TAP_RESET_TIMEOUT 1000U
-
-// Test out syn key
-#define TEST_SYN
