@@ -62,11 +62,21 @@
 // Just leave ARSTNEIO with my own thumb key lol, theirs is shit
 #   define __T_L1___ OS(LSFT)
 #   define __T_L2___ MA(MINS)
+#   define __T_L3___ MC(LEFT)
+#   define __T_L3W__ MG(LEFT) // fuckwin version
+// If there's an extra left thumb key:
+#   define __T_L4___ LTK(CAPS)
 // Right thumbs
 #   define __T_R1___ MG(SPC)
 #   define __T_R1W__ MC(SPC) // fuckwin version
 #   define __T_R2___ LT0(QUOT)
 // #   define __T_L1___ MG(QUOT)
+#   define __T_R3___ MC(RGHT)
+#   define __T_R3W__ MA(RGHT) // fuckwin version
+// If there's an extra right thumb key, I NO LONGER prefer it between 2 and 3
+// Please go after R3
+#   define __T_R4___ MA(TAB)
+#   define __T_R4W__ MG(TAB)
 // #   define __T_L2___ MA(MINS)
 // #   define __T_L1___ OS(LSFT)
 // #   define __T_L2___ OS(LALT)
@@ -80,19 +90,10 @@
 // #define __T_L1___ MG(SPC)
 // #define __T_L2___ MA(F21) // one shot shift on tap + alt on hold
 // MC(F22) = key repeater on tap + ctrl on hold
-#define __T_L3___ MC(LEFT)
-#define __T_L3W__ MG(LEFT) // fuckwin version
-// If there's an extra left thumb key:
-#define __T_L4___ LTK(CAPS)
 
 // left thumb space?
 // #define __T_R1___ MG(QUOT)
 // #define __T_R2___ MC(MINS)
-#define __T_R3___ MC(RGHT)
-#define __T_R3W__ MG(RGHT) // fuckwin version
-// If there's an extra right thumb key, I NO LONGER prefer it between 2 and 3
-// Please go after R3
-#define __T_R4___ MA(TAB)
 
 // renaming shit codes
 #define DEBUG DB_TOGG
