@@ -398,10 +398,10 @@ bool get_permissive_hold(uint16_t keycode, keyrecord_t *record) {
     return true;
 }
 
-#if defined(RGBLIGHT_EFFECT_RAINBOW_SWIRL)
+// #if defined(RGBLIGHT_EFFECT_RAINBOW_SWIRL)
 // default is 100, 50, 20. speed things up yeahhh
-const uint8_t RGBLED_RAINBOW_SWIRL_INTERVALS[] PROGMEM = {16, 8, 4};
-#endif
+// const uint8_t RGBLED_RAINBOW_SWIRL_INTERVALS[] PROGMEM = {16, 8, 4};
+// #endif
 
 #if defined(RGB_MATRIX_ENABLE) || defined(RGBLIGHT_ENABLE) || defined(OLED_ENABLE)
 #   undef RGB_MATRIX_TIMEOUT

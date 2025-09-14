@@ -1,8 +1,8 @@
 #pragma once
 
 // If you don’t have a crazy amount of layers (9+), this helps save space
-// #define LAYER_STATE_8BIT
-#define LAYER_STATE_16BIT
+#define LAYER_STATE_8BIT
+// #define LAYER_STATE_16BIT
 
 // disable the old style of macros, and no action function, see if it saves space
 #define NO_ACTION_MACRO
@@ -72,6 +72,7 @@
 #    undef RGBLIGHT_EFFECT_RAINBOW_MOOD // all same colour, slowwww fade to other colours, 3/10
 #    undef RGBLIGHT_EFFECT_SNAKE // single colour rolling wave, 2/10
 #    define RGBLIGHT_EFFECT_RAINBOW_SWIRL // different colours, fade to other colours, 10/10
+#    define RGBLIGHT_DEFAULT_MODE RGBLIGHT_MODE_RAINBOW_SWIRL
 #    undef RGBLIGHT_EFFECT_BREATHING // slowly pulses in a breathing fashion, 3/10
 #    undef RGBLIGHT_EFFECT_KNIGHT // one colour that flashes back and forth, 0/10
 #    undef RGBLIGHT_EFFECT_CHRISTMAS // alternating red and green, 0/10
@@ -80,6 +81,11 @@
 #    undef RGBLIGHT_EFFECT_ALTERNATING // single colour flashing in and out, 0/10
 #    define RGBLIGHT_SLEEP
 // #    define BACKLIGHT_CAPS_LOCK
+#endif
+
+#if defined(RGB_MATRIX_ENABLE)
+    // #define ENABLE_RGB_MATRIX_RAINBOW_MOVING_CHEVRON // compile error as of 2025-09-06
+    #define ENABLE_RGB_MATRIX_RAINBOW_BEACON
 #endif
 
 // #define RGBLIGHT_ANIMATIONS

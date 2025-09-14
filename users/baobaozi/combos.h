@@ -86,9 +86,9 @@ uint16_t get_combo_term(uint16_t index, combo_t *combo) {
     // }
     // or with combo index, i.e. its name from enum.
 #if defined(MOUSEKEY_ENABLE)
-    if (index == cmb_tgnav || index == cmb_qwer || index == cmb_cur) {
+    if (index == cmb_tgnav || index == cmb_cur) {
 #else
-    if (index == cmb_tgnav || index == cmb_qwer) {
+    if (index == cmb_tgnav) {
 #endif
         return COMBO_TERM + 10;
     } else if (index == cmb_bspc) {

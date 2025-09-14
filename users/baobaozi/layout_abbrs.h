@@ -5,7 +5,7 @@
 
 // Shortcuts to make keymap more readable
 // Layer change abbrs
-#define TGQWER TG(_QWERTY)
+// #define TGQWER TG(_QWERTY)
 #define TGCLMK TG(_COLEMAK)
 #define TGFWIN TG(_FKWIN)
 #define TGNAV TG(_NAV)
@@ -132,17 +132,17 @@
 #define _________________ROW_BOT_COLMK_R_________________ KC_K     ,KC_M     ,KC_COMM  ,KC_DOT   ,MC(SLSH)
 #endif
 
-// Colemak but FUCK WINDOWS version
+// Colemak but FUCK WINDOWS version, if I set keyboard to qwerty, and set the default keymap in the laptop to Colemak, it just works!
 // LEFT                                                  ┌─── Q ───┬─── W ───┬─── F ───┬─── P ───┬─── G ───┐
-#define _________________ROW_TOP_FKWIN_L_________________ LTW(Q)   ,_______  ,_______  ,_______  ,_______
-#define _________________ROW_MID_FKWIN_L_________________ _______  ,_______  ,_______  ,_______  ,_______
-#define _________________ROW_BOT_FKWIN_L_________________ _______  ,_______  ,_______  ,_______  ,_______
+#define _________________ROW_TOP_FKWIN_L_________________ LTW(Q)   ,KC_W     ,KC_E     ,KC_R     ,KC_T
+#define _________________ROW_MID_FKWIN_L_________________ KC_A     ,KC_S     ,KC_D     ,KC_F     ,KC_G
+#define _________________ROW_BOT_FKWIN_L_________________ LTK(Z)   ,KC_X     ,KC_C     ,KC_V     ,KC_B
 //                                                       └─────────┴─────────┴─────────┴─────────┴─────────┘
 
 // RIGHT                                                 ┌─── J ───┬─── L ───┬─── U ───┬─── Y ───┬─── ; ───┐
-#define _________________ROW_TOP_FKWIN_R_________________ _______  ,_______  ,_______  ,_______  ,_______
-#define _________________ROW_MID_FKWIN_R_________________ _______  ,_______  ,_______  ,_______  ,_______
-#define _________________ROW_BOT_FKWIN_R_________________ _______  ,_______  ,_______  ,_______  ,MG(SLSH)
+#define _________________ROW_TOP_FKWIN_R_________________ KC_Y     ,KC_U     ,KC_I     ,KC_O     ,KC_P
+#define _________________ROW_MID_FKWIN_R_________________ KC_H     ,KC_J     ,KC_K     ,KC_L     ,KC_SCLN
+#define _________________ROW_BOT_FKWIN_R_________________ KC_N     ,KC_M     ,KC_COMM  ,KC_DOT   ,MG(SLSH)
 //                                                       └─────────┴─────────┴─────────┴─────────┴─────────┘
 
 // QWERTY (is pretty shit and i forgot how to use it so i will probably delete it later)

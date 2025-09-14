@@ -40,15 +40,17 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // #define IGNORE_MOD_TAP_INTERRUPT
 
 #if defined(RGBLIGHT_ENABLE)
-    #undef RGBLED_NUM
+    // #undef RGBLED_NUM
     #undef RGBLIGHT_ANIMATIONS
-    #define RGBLED_NUM 27
+    // #undef RGBLIGHT_LED_COUNT
+    // #define RGBLIGHT_LED_COUNT 27
     // #define RGBLIGHT_SLEEP
-    #define RGBLIGHT_SPLIT
-    #define RGBLIGHT_LIMIT_VAL 120
+    // #define RGBLIGHT_SPLIT
+    // #define RGBLIGHT_LIMIT_VAL 120
     // #define RGBLIGHT_HUE_STEP 10
     // #define RGBLIGHT_SAT_STEP 17
     // #define RGBLIGHT_VAL_STEP 17
+    #define RGBLIGHT_EFFECT_RAINBOW_SWIRL // different colours, fade to other colours, 10/10
 #endif
 
 // #define OLED_FONT_H "keyboards/crkbd/keymaps/baobaozi/glcdfont.c"
@@ -74,5 +76,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 /* enable the animations you want. */
 // #   define ENABLE_RGB_MATRIX_PIXEL_RAIN
-#   define ENABLE_RGB_MATRIX_RAINBOW_MOVING_CHEVRON
+// #   define ENABLE_RGB_MATRIX_RAINBOW_MOVING_CHEVRON
+#   define ENABLE_RGB_MATRIX_RAINBOW_BEACON
 #endif

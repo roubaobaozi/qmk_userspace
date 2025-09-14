@@ -15,7 +15,6 @@ enum userspace_layers {
     // NEW_SAFE_RANGE,  // use "NEW_SAFE_RANGE" for keymap specific codes
     _COLEMAK = 0,
     _FKWIN,
-    _QWERTY,
     // _XIN,
     _NAV,
     _NVW,

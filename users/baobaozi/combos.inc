@@ -6,7 +6,7 @@
 // layer toggles
 COMB(tgnav, TGNAV,                              LTF(SCLN), KC_O,   MC(SLSH))
 // COMB(qwer,  TGQWER,                             LTN(Q),    LTS(W), KC_E,    KC_R)
-COMB(qwer,  TGQWER,                             LTN(Q),    KC_W,   KC_E,    KC_R)
+// COMB(qwer,  TGQWER,                             LTN(Q),    KC_W,   KC_E,    KC_R)
 #if defined(MOUSEKEY_ENABLE)
 // COMB(cur,   TGCUR,                              LTS(W),    KC_F,   KC_P)
 COMB(cur,   TGCUR,                              KC_W,      KC_F,   KC_P)

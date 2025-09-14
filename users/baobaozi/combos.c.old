@@ -91,7 +91,6 @@ uint16_t get_combo_term(uint16_t index, combo_t *combo) {
     // or with combo index, i.e. its name from enum.
     switch (index) {
         case cmb_tgnav:
-        case cmb_qwer:
 #if defined(MOUSEKEY_ENABLE)
         case cmb_cur:
 #endif

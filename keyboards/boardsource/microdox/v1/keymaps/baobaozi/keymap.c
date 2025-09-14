@@ -19,18 +19,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                             // └─────────┴─────────┴─────────┘         └─────────┴─────────┴─────────┘
     ),
 
-    [_QWERTY] = LAYOUT_wrapper(
-        // ┌─── Q ───┬─── W ───┬─── F ───┬─── P ───┬─── G ───┐         ┌─── J ───┬─── L ───┬─── U ───┬─── Y ───┬─── ; ───┐
-            _________________ROW_TOP_QWERT_L_________________,          _________________ROW_TOP_QWERT_R_________________,
-        // ├─────────┼─────────┼─────────┼─────────┼─────────┤         ├─────────┼─────────┼─────────┼─────────┼─────────┤
-            _________________ROW_MID_QWERT_L_________________,          _________________ROW_MID_QWERT_R_________________,
-        // ├─────────┼─────────┼─────────┼─────────┼─────────┤         ├─────────┼─────────┼─────────┼─────────┼─────────┤
-            _________________ROW_BOT_QWERT_L_________________,          _________________ROW_BOT_QWERT_R_________________,
-        // └─────────┴─────────┼─────────┼─────────┼─────────┤         ├─────────┼─────────┼─────────┼─────────┴─────────┘
-                                _______  ,_______  ,_______  ,          _______  ,_______  ,_______
-                            // └─────────┴─────────┴─────────┘         └─────────┴─────────┴─────────┘
-    ),
-
     [_NAV] = LAYOUT_wrapper(
         // ┌─── Q ───┬─── W ───┬─── F ───┬─── P ───┬─── G ───┐         ┌─── J ───┬─── L ───┬─── U ───┬─── Y ───┬─── ; ───┐
             _________________ROW_TOP_NAV_L___________________,          _________________ROW_TOP_NAV_R___________________,
@@ -161,8 +149,8 @@ static void render_status(void) {
     /*     oled_write_P(PSTR("NUMPAD        > 123\n"), false); */
     } else if (get_highest_layer(layer_state) == _NAV) {
         oled_write_P(PSTR("NAVIGATION   > move\n"), false);
-    } else if (get_highest_layer(layer_state) == _QWERTY) {
-        oled_write_P(PSTR("QWERTY      > sucks\n"), false);
+    } else if (get_highest_layer(layer_state) == _FKWIN) {
+        oled_write_P(PSTR("FUCK WINDOWS > sucks\n"), false);
     } else {
         oled_write_P(PSTR("COLEMAK    > typing\n"), false);
     }
