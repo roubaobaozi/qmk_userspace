@@ -134,18 +134,18 @@
 
 // Colemak but FUCK WINDOWS version, if I set keyboard to qwerty, and set the default keymap in the laptop to Colemak, it just works!
 // LEFT                                                  ┌─── Q ───┬─── W ───┬─── F ───┬─── P ───┬─── G ───┐
-#define _________________ROW_TOP_FKWIN_L_________________ LTW(Q)   ,KC_W     ,KC_E     ,KC_R     ,KC_T
-#define _________________ROW_MID_FKWIN_L_________________ KC_A     ,KC_S     ,KC_D     ,KC_F     ,KC_G
-#define _________________ROW_BOT_FKWIN_L_________________ LTK(Z)   ,KC_X     ,KC_C     ,KC_V     ,KC_B
+#define _________________ROW_TOP_FKWIN_L_________________ LTW(Q)   ,_______  ,_______  ,_______  ,_______
+#define _________________ROW_MID_FKWIN_L_________________ _______  ,_______  ,_______  ,_______  ,_______
+#define _________________ROW_BOT_FKWIN_L_________________ _______  ,_______  ,_______  ,_______  ,_______
 //                                                       └─────────┴─────────┴─────────┴─────────┴─────────┘
 
 // RIGHT                                                 ┌─── J ───┬─── L ───┬─── U ───┬─── Y ───┬─── ; ───┐
-#define _________________ROW_TOP_FKWIN_R_________________ KC_Y     ,KC_U     ,KC_I     ,KC_O     ,KC_P
-#define _________________ROW_MID_FKWIN_R_________________ KC_H     ,KC_J     ,KC_K     ,KC_L     ,KC_SCLN
-#define _________________ROW_BOT_FKWIN_R_________________ KC_N     ,KC_M     ,KC_COMM  ,KC_DOT   ,MG(SLSH)
+#define _________________ROW_TOP_FKWIN_R_________________ _______  ,_______  ,_______  ,_______  ,_______
+#define _________________ROW_MID_FKWIN_R_________________ _______  ,_______  ,_______  ,_______  ,_______
+#define _________________ROW_BOT_FKWIN_R_________________ _______  ,_______  ,_______  ,_______  ,MG(SLSH)
 //                                                       └─────────┴─────────┴─────────┴─────────┴─────────┘
 
-// QWERTY (is pretty shit and i forgot how to use it so i will probably delete it later)
+// QWERTY (is pretty shit and i forgot how to use it so i have deleted it from my layers)
 // LEFT                                                  ┌─── Q ───┬─── W ───┬─── E ───┬─── R ───┬─── T ───┐
 #define _________________ROW_TOP_QWERT_L_________________ LTN(Q)   ,KC_W     ,KC_E     ,KC_R     ,KC_T
 // #define _________________ROW_TOP_QWERT_L_________________ LTN(Q)   ,LTS(W)   ,KC_E     ,KC_R     ,KC_T
