@@ -19,6 +19,7 @@
 #define LTW(kc) LT(_NVW, KC_##kc)
 #define LT0(kc) LT(_SYN, KC_##kc)
 #define LTK(kc) LT(_KB, KC_##kc)
+#define LTB(kc) LT(_KBW, KC_##kc)
 #define LTC(kc) LT(_CUR, KC_##kc)
 #define LTF(kc) LT(_FNC, KC_##kc)
 // #define LTE(kc) LT(_EMO, KC_##kc)
@@ -99,6 +100,29 @@
 #define DEBUG DB_TOGG
 #define FLASHIT QK_BOOT
 
+// All-purpose RGB lighting codes
+#if defined(RGB_MATRIX)
+    #define LGT_NXT RM_NEXT
+    #define LGT_TOG RM_TOGG
+    #define LGT_RBW RGB_M_SW
+    #define LGT_HUU RM_HUEU
+    #define LGT_HUD RM_HUED
+    #define LGT_SAU RM_SATU
+    #define LGT_SAD RM_SATD
+    #define LGT_VAU RM_VALU
+    #define LGT_VAD RM_VALD
+#else
+    #define LGT_NXT UG_NEXT
+    #define LGT_TOG UG_TOGG
+    #define LGT_RBW RGB_M_SW
+    #define LGT_HUU UG_HUEU
+    #define LGT_HUD UG_HUED
+    #define LGT_SAU UG_SATU
+    #define LGT_SAD UG_SATD
+    #define LGT_VAU UG_VALU
+    #define LGT_VAD UG_VALD
+#endif
+
 // Row abbrs
 #define _________________ROW_5_NOTHING___________________ XXXXXXX  ,XXXXXXX  ,XXXXXXX  ,XXXXXXX  ,XXXXXXX
 #define _________________ROW_5_TRNSPRNT__________________ _______  ,_______  ,_______  ,_______  ,_______
@@ -136,7 +160,7 @@
 // LEFT                                                  ┌─── Q ───┬─── W ───┬─── F ───┬─── P ───┬─── G ───┐
 #define _________________ROW_TOP_FKWIN_L_________________ LTW(Q)   ,_______  ,_______  ,_______  ,_______
 #define _________________ROW_MID_FKWIN_L_________________ _______  ,_______  ,_______  ,_______  ,_______
-#define _________________ROW_BOT_FKWIN_L_________________ _______  ,_______  ,_______  ,_______  ,_______
+#define _________________ROW_BOT_FKWIN_L_________________ LTB(Z)   ,_______  ,_______  ,_______  ,_______
 //                                                       └─────────┴─────────┴─────────┴─────────┴─────────┘
 
 // RIGHT                                                 ┌─── J ───┬─── L ───┬─── U ───┬─── Y ───┬─── ; ───┐
@@ -182,7 +206,6 @@
 #define _________________ROW_MID_NAV_R___________________ AS(6)    ,KC_LEFT  ,KC_UP    ,KC_DOWN  ,KC_RGHT   // AS(6) ^ home in vim
 #define _________________ROW_BOT_NAV_R___________________ AS(4)    ,AG(LEFT) ,AG(UP)   ,AG(DOWN) ,AG(RGHT)  // AS(4) $ end in vim
 //                                                       └─────────┴─────────┴─────────┴─────────┴─────────┘
-
 // NAV FCKWIN edition (all media and navigation related stuff)
 // LEFT                                                  ┌─── Q ───┬─── W ───┬─── F ───┬─── P ───┬─── G ───┐
 #define _________________ROW_TOP_NVW_L___________________ TGNVW    ,OS(LSFT) ,KC_VOLU  ,KC_F3    ,MFNXT
@@ -206,6 +229,7 @@
 #define _________________ROW_MID_SYN_R___________________ KC_SLSH  ,KC_4     ,KC_5     ,KC_6     ,KC_0
 #define _________________ROW_BOT_SYN_R___________________ KC_PAST  ,KC_1     ,KC_2     ,KC_3     ,KC_DOT
 //                                                       └─────────┴─────────┴─────────┴─────────┴─────────┘
+
 // CUR (mouse layer)
 // LEFT                                                  ┌─── Q ───┬─── W ───┬─── F ───┬─── P ───┬─── G ───┐
 #define _________________ROW_TOP_CUR_L___________________ TGCUR    ,MS_ACL2  ,MS_ACL1  ,MS_ACL0  ,XXXXXXX
@@ -217,12 +241,13 @@
 #define _________________ROW_MID_CUR_R___________________ KC_BSPC  ,MS_LEFT  ,MS_UP    ,MS_DOWN  ,MS_RGHT
 #define _________________ROW_BOT_CUR_R___________________ KC_PGDN  ,MS_WHLR  ,MS_WHLD  ,MS_WHLU  ,MS_WHLL // reversed Up/Down because of Apple’s Natural style scrolling
 //                                                       └─────────┴─────────┴─────────┴─────────┴─────────┘
+
 // KB (keyboard actions and misc)
 #define _________________ROW_NUM_KB_L____________________ KC_F1    ,KC_F2    ,KC_F3    ,KC_F4    ,KC_F5
 #define _________________ROW_NUM_KB_R____________________ KC_F6    ,KC_F7    ,KC_F8    ,KC_F9    ,KC_F10
 // LEFT                                                  ┌─── Q ───┬─── W ───┬─── F ───┬─── P ───┬─── G ───┐
-#define _________________ROW_TOP_KB_L____________________ EE_CLR   ,RM_NEXT  ,RM_HUEU  ,RM_SATU  ,RM_VALU
-#define _________________ROW_MID_KB_L____________________ RGB_M_SW ,RM_TOGG  ,RM_HUED  ,RM_SATD  ,RM_VALD
+#define _________________ROW_TOP_KB_L____________________ EE_CLR   ,LGT_NXT  ,LGT_HUU  ,LGT_SAU  ,LGT_VAU
+#define _________________ROW_MID_KB_L____________________ LGT_RBW  ,LGT_TOG  ,LGT_HUD  ,LGT_SAD  ,LGT_VAD
 #define _________________ROW_BOT_KB_L____________________ _______  ,ASG(4)   ,ALL(4)   ,ASG(3)   ,ALL(3)
 //                                                       └─────────┴─────────┴─────────┴─────────┴─────────┘
 // RIGHT                                                 ┌─── J ───┬─── L ───┬─── U ───┬─── Y ───┬─── ; ───┐
@@ -231,11 +256,24 @@
 #define _________________ROW_MID_KB_R____________________ KC_F11   ,KC_F12   ,ASG(Y)   ,ASC(SPC) ,TGFWIN // switch ctrl and gui
 #define _________________ROW_BOT_KB_R____________________ FLASHIT  ,KC_F2    ,KC_PAUS  ,KC_SCRL  ,AC(UP) // macOS: window exposé
 //                                                       └─────────┴─────────┴─────────┴─────────┴─────────┘
+// KB FUCKWIN version (keyboard actions and misc)
+// LEFT                                                  ┌─── Q ───┬─── W ───┬─── F ───┬─── P ───┬─── G ───┐
+#define _________________ROW_TOP_KBW_L___________________ EE_CLR   ,LGT_NXT  ,LGT_HUU  ,LGT_SAU  ,LGT_VAU
+#define _________________ROW_MID_KBW_L___________________ LGT_RBW  ,LGT_TOG  ,LGT_HUD  ,LGT_SAD  ,LGT_VAD
+#define _________________ROW_BOT_KBW_L___________________ _______  ,ASG(S)   ,ASG(S)   ,ASG(S)   ,ASG(S)
+//                                                       └─────────┴─────────┴─────────┴─────────┴─────────┘
+// RIGHT                                                 ┌─── J ───┬─── L ───┬─── U ───┬─── Y ───┬─── ; ───┐
+//                                                          vscode: <git chg ,<git prb ,>git prb ,>git chg
+#define _________________ROW_TOP_KBW_R___________________ DEBUG    ,AAS(F5)  ,AAS(F8)  ,AA(F8)   ,AA(F5)
+#define _________________ROW_MID_KBW_R___________________ KC_F11   ,KC_F12   ,ASG(Y)   ,AG(V)    ,TGFWIN // switch ctrl and gui
+#define _________________ROW_BOT_KBW_R___________________ FLASHIT  ,KC_F2    ,KC_PAUS  ,KC_SCRL  ,AC(UP) // macOS: window exposé
+//                                                       └─────────┴─────────┴─────────┴─────────┴─────────┘
+
 // Functions (function keys and misc)
 // LEFT                                                  ┌─── Q ───┬─── W ───┬─── F ───┬─── P ───┬─── G ───┐
-#define _________________ROW_TOP_FNC_L___________________ KC_F12   ,KC_F7    ,KC_F8    ,KC_F9    ,XXXXXXX
-#define _________________ROW_MID_FNC_L___________________ KC_F11   ,KC_F4    ,KC_F5    ,KC_F6    ,XXXXXXX
-#define _________________ROW_BOT_FNC_L___________________ KC_F10   ,KC_F1    ,KC_F2    ,KC_F3    ,XXXXXXX
+#define _________________ROW_TOP_FNC_L___________________ KC_F12   ,KC_F7    ,KC_F8    ,KC_F9    ,KC_F12
+#define _________________ROW_MID_FNC_L___________________ KC_F11   ,KC_F4    ,KC_F5    ,KC_F6    ,KC_F11
+#define _________________ROW_BOT_FNC_L___________________ KC_F10   ,KC_F1    ,KC_F2    ,KC_F3    ,KC_F10
 //                                                       └─────────┴─────────┴─────────┴─────────┴─────────┘
 // RIGHT                                                 ┌─── J ───┬─── L ───┬─── U ───┬─── Y ───┬─── ; ───┐
 //                                          macOS: foc nxt wdw tbar,win expo ,app expo ,next tab

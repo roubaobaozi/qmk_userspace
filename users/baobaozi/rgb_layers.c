@@ -32,6 +32,10 @@ const rgblight_segment_t PROGMEM kb_layer[] = RGBLIGHT_LAYER_SEGMENTS(
     {0, RGBLIGHT_LED_COUNT/2, 115, 250, 175}, // between springgreen and turquoise
     {RGBLIGHT_LED_COUNT/2, RGBLIGHT_LED_COUNT, 70, 255, 150} // between springgreen and turquoise
 );
+const rgblight_segment_t PROGMEM kbw_layer[] = RGBLIGHT_LAYER_SEGMENTS(
+    {0, RGBLIGHT_LED_COUNT/2, 115, 250, 175}, // between springgreen and turquoise
+    {RGBLIGHT_LED_COUNT/2, RGBLIGHT_LED_COUNT, 70, 255, 150} // between springgreen and turquoise
+);
 // const rgblight_segment_t PROGMEM shift_layer[] = RGBLIGHT_LAYER_SEGMENTS(
 //     {0, RGBLIGHT_LED_COUNT, 0, 21, 255}
 // );
@@ -56,6 +60,7 @@ const rgblight_segment_t *const PROGMEM rgb_light_layers[] = RGBLIGHT_LAYERS_LIS
     cur_layer,
     fnc_layer,
     kb_layer,
+    kbw_layer,
     // shift_layer,
     capslock_layer
 );
@@ -73,6 +78,7 @@ layer_state_t layer_state_set_user(layer_state_t state) {
     rgblight_set_layer_state(5, layer_state_cmp(state, _CUR));
     rgblight_set_layer_state(6, layer_state_cmp(state, _FNC));
     rgblight_set_layer_state(7, layer_state_cmp(state, _KB));
+    rgblight_set_layer_state(8, layer_state_cmp(state, _KBW));
     /* rgblight_set_layer_state(3, layer_state_cmp(state, _SYM)); */
     /* rgblight_set_layer_state(4, layer_state_cmp(state, _NUM)); */
     /* rgblight_set_layer_state(5, layer_state_cmp(state, _CUR)); */
@@ -137,7 +143,7 @@ layer_state_t layer_state_set_user(layer_state_t state) {
 
 bool led_update_user(led_t led_state) {
     dprintf("in led_update_user: cap=%u\n", led_state.caps_lock);
-    rgblight_set_layer_state(8, led_state.caps_lock);
+    rgblight_set_layer_state(9, led_state.caps_lock);
     // if (led_state.caps_lock) {
     //     rgblight_sethsv(HSV_RED);
     // }
@@ -155,5 +161,5 @@ void keyboard_post_init_user(void) {
     // drashna’s fix for weird lights
     rgblight_enable_noeeprom();
     layer_state_set_user(0);
-    // rgblight_mode(RGBLIGHT_MODE_KNIGHT);
+    rgblight_mode(RGBLIGHT_MODE_RAINBOW_SWIRL);
 }

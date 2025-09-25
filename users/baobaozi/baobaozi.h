@@ -22,6 +22,7 @@ enum userspace_layers {
     _CUR,
     _FNC,
     _KB,
+    _KBW,
 };
 
 #if defined(TAP_DANCE_ENABLE)
